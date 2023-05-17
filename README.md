@@ -63,4 +63,4 @@ This include the main method of the class QuadraticClient. It uses a scanner to 
 		return answer + newLine + conc + Symmetry + newLine + "Vertex: (" + symmetry + ", " + vertex + ")" + xInt + newLine + "y-intercept: " + yInt; 
 	}
 
-This analyzes the values of the coefficients passed and then calls other methods within the class that analyze the vertex, x intercept, y intercept, direction in which it opens, as well as providing the fully formatted quadratic equation. 
+This method within the Quadratic class takes in the values of the coefficients passed and then calls other methods within the class to analyze the vertex, x intercept, y intercept, direction in which it opens, as well as providing the fully formatted quadratic equation. 
