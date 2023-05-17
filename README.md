@@ -64,3 +64,36 @@ This include the main method of the class QuadraticClient. It uses a scanner to 
 	}
 
 This method within the Quadratic class takes in the values of the coefficients passed and then calls other methods within the class to analyze the vertex, x intercept, y intercept, direction in which it opens, as well as providing the fully formatted quadratic equation. 
+
+# public static String quadForm(int a, int b, int c) {
+		double discriminant = discriminant(a,b,c);
+		if(discriminant<0) {
+			return "no real roots";
+		} else if(discriminant == 0) {
+			double oneRoot = ((-1*b)/(2*a));
+			return oneRoot+"";
+		}else {
+			double plus = round2((-1*b + sqrt(discriminant))/(2*a));
+			double minus = round2((-1*b - sqrt(discriminant))/(2*a));
+			double max = max(plus,minus);
+			double min = min(minus,plus);
+			return absValue(max) + " and " + -max;
+		}
+	}
+	
+This method puts the coefficients into the quadratic formula. 
+
+# public static double discriminant(double a, double b, double c) {
+		return (b*b-4*(a*c));
+   }
+This method calculates and returns the discriminant of the coeeficients
+
+# public static double sqrt(double n) {
+		double a = n;
+		for(int i=1; i<=n; i++) {
+			a = (0.5*(n/a+a));}
+			a = round2(a);
+			return a;
+   }
+ This method calculates the square root of the discriminant which is used to calculate the quadratic equation. 
+ 
